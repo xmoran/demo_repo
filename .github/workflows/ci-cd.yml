@@ -41,9 +41,9 @@ jobs:
         python-version: [3.8]
         node-version: ["12.x"]
         appname: ["backend"]
-        deploy-group: ["dev-deployment-group"]
+        deploy-group: ["backend-deploy-group"]
         s3-bucket: ["aws-codedeploy-deployments-ia"]
-        s3-filename: ["main-aws-codedeploy-${{ github.sha }}"]
+        s3-filename: ["artifact-${{ github.sha }}"]
 
     needs: buildAndTest
     steps:
