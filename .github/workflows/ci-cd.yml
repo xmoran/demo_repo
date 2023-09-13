@@ -18,6 +18,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
 
       # Initialize Node.js
       - name: Install Node.js ${{ matrix.node-version }}
